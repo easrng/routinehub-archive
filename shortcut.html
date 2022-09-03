@@ -111,6 +111,12 @@
         document.querySelector("#icon").className=shortcut.icon+" shortcut-icon s64"
     	document.querySelector("#description").innerHTML=DOMPurify.sanitize(shortcut.description)
     	document.querySelector("#releasenotes").innerHTML=DOMPurify.sanitize(shortcut.releasenotes)
+        for (let link of document.querySelectorAll("#description a[href*='routinehub.co/shortcut/'], #releasenotes a[href*='routinehub.co/shortcut/']")) {
+          let rhid = (link.href.match(/routinehub\.co\/shortcut\/(\d+)/)||[])[1]
+          if (rhid) {
+            link.href = "https://easrng.github.io/routinehub-archive/shortcut.html?" + rhid
+          }
+        }
     	let dl = "https://easrng.github.io/routinehub-archive/download.html?"+shortcut.latest
         document.querySelector("#download").href=dl
         new QRCode(document.getElementById("qrcode"), dl);
