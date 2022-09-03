@@ -1,4 +1,4 @@
-# Routinehub Archive
+# RoutineHub Archive
 A static archive of RoutineHub.
 
 ## Limitations
