@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RoutineHub Archive</title>
+    <meta property="og:title" content="RoutineHub Archive" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="canonical" href="https://easrng.github.io/routinehub-archive/" />
+    <meta property="og:url" content="https://easrng.github.io/routinehub-archive/" />
+    <meta property="og:site_name" content="Routinehub Archive" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="RoutineHub Archive" />
+    <link rel="stylesheet" href="https://easrng.github.io/routinehub-archive/main.css">
+    <link rel="stylesheet" href="https://files.stork-search.net/releases/v1.5.0/flat.css">
+    <style>
+    body{
+      font-family: sans-serif;
+    }
+    
+    .stork-attribution {
+      display: none;
+    }
+    .stork-wrapper-flat .stork-results {
+      border-bottom: none;
+    }
+    .stork-output.stork-output-visible {
+      overflow: hidden;
+    }
+    .stork-wrapper-flat {
+      --stork-background-color: #fff;
+    }
+          
+    .stork-wrapper-flat .stork-output-visible {
+      border: none;
+      margin-top: 0.5rem;
+    }
+    .stork-wrapper-flat .stork-progress {
+      margin: 0;
+      height: 1px;
+      max-width: none;
+    }
+    .card:not(.stork-output-visible) {
+      display: none;
+    }
+    .stork-wrapper-flat .stork-output-visible {
+      border: none;
+      margin-top: 0.5rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="message pop-up">
+        <div class="message-header">
+            <p class="message-title"></p>
+            <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body"></div>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://easrng.github.io/routinehub-archive/">
+                    <img src="https://easrng.github.io/routinehub-archive/logo.png" alt="RoutineHub logo">
+                    <p>RoutineHub Mirror</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="content" class="section">
+
+        <div class="container">
+            <section class="hero is-medium">
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="columns">
+                            <div class="column is-two-thirds mt-6">
+                                <h1 class="title is-size-1-desktop is-size-3-touch">
+                                    RoutineHub Mirror
+                                </h1>
+                                <h2 class="subtitle is-size-3-desktop is-size-4-touch">
+                                    A static archive of RoutineHub
+                                </h2>
+                                <p>
+                                    <div class="stork-wrapper-flat">
+                                        <input data-stork="routinehub" class="input" placeholder="Search for a shortcut..." />
+                                        <div data-stork="routinehub-output" class="card"></div>
+                                    </div>
+                                    <br>
+                                    <h2 id="limitations" class="subtitle" style="margin-bottom:0.5rem">Limitations</h2>
+                                    <ul>
+                                        <li>Shortcuts marked NSFW were not saved</li>
+                                        <li>Only the latest version of each shortcut is saved</li>
+                                    </ul>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <script src="https://files.stork-search.net/releases/v1.5.0/stork.js"></script>
+    <script>
+        stork.register("routinehub", "https://easrng.github.io/routinehub-archive/index.st", {transformResultUrl:e=>"https://easrng.github.io/routinehub-archive/shortcut.html?"+e});
+    </script>
+</body>
+
+</html>
