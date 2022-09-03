@@ -3,7 +3,7 @@
 (async ()=>{
 let res = await fetch("https://easrng.github.io/routinehub-archive/download/"+location.search.slice(1))
 if(!res.ok) document.write("Shortcut not found.")
-location.replace((await res.text()).trim())
+else location.replace((await res.text()).trim())
 })()
 </script>
 <noscript>
