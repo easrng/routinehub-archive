@@ -1,0 +1,1 @@
+{"id":"11236","name":"Image Metadata","tagline":"Get the EXIF information of an image.","icon":"ios15 c946986751 g59682","latest":"32091","description":"\n\t\t\t\t\t<p>Retrieve metadata that cannot be retrieved with the \"Get Image Details\" action, such as shutter speed and aperture value.</p>\n\t\t\t\t","releasenotes":"<p><strong>0.1 - March 3, 2022, 6:44 a.m.</strong></p>"}

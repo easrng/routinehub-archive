@@ -1,0 +1,1 @@
+{"id":"8558","name":"載入檔案","tagline":"創建指定路徑存入檔案","icon":"ios14 c3031607807 g61440","latest":"25745","description":"\n\t\t\t\t\t<p>創建並把檔案存入指定路徑/Shortcuts/學生名單json/。輸入檔案為json格式{\"1\":\"XXX\",\"2\":\"XXX\"...}的文字檔，此檔案會被抽簽捷徑引用。</p>\n\t\t\t\t","releasenotes":"<p><strong>1.0 - March 1, 2021, 5:55 a.m.</strong></p>"}

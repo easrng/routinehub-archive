@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="shortcut">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RoutineHub Mirror</title>
+		<link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="./main.css" />
+	<script src="./purify.min.js"></script>
+	<script src="./qrcode.min.js"></script>
+	<script>
+	const request = new XMLHttpRequest();
+    request.open('GET', 'shortcuts/'+location.search.slice(1), false);
+    request.send(null);
+	if (request.status === 200) window.shortcut = JSON.parse(request.responseText)
+	</script>
+    </head>
+    <body>
+        <div class="message pop-up">
+	<div class="message-header">
+		<p class="message-title"></p>
+		<button class="delete" aria-label="delete"></button>
+	</div>
+	<div class="message-body"></div>
+</div>
+        
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+	<div class="container">	
+	    <div class="navbar-brand">
+	        <a class="navbar-item" href="/">
+				<img src="logo.png" alt="RoutineHub logo">
+	        	<p>RoutineHub Mirror</p>
+	        </a>
+	    </div>
+	</div>
+</nav>
+
+        <section id="content" class="section">
+            
+
+<div class="container">
+	<article class="media shortcut-header">
+		
+			<figure class="media-left">
+				
+					<div class="shortcut-icon s64 
+								ios14 
+								c2846468607" id="icon">
+					</div>
+				
+			</figure>
+		
+		<div class="media-content">
+			<div class="content">
+			<div class="titles">
+				<h3 class="title is-3" id="title">Loading...</h3>
+				<h4 class="subtitle is-4" id="tagline">&nbsp;</h4>
+				
+			</div>
+		</div>
+	</article>
+	<hr>
+	
+	<div class="columns">
+		<div class="column sidebar is-2">
+			
+			<div class="actions">
+				
+					<a id="download" class="button is-dark is-fullwidth">Get Shortcut</a>
+				
+				
+				
+			</div>
+			<hr>
+			
+			
+			
+				<div class="qr-code has-text-centered is-hidden-mobile">
+					<div id="qrcode" style="aspect-ratio: 1;overflow: hidden;width: 100%;"></div><br>
+					<p class="is-size-7"><em>Scan using your iPhone's camera to download</em></p>
+				</div>
+			
+		</div>
+		<div class="column is-10 details">
+			<div class="description">
+				<h4 class="title is-4">Description</h4>
+				
+				<div class="content" id="description">
+				</div>
+			</div>
+			<hr>
+			
+			<div class="latest-release">
+				<h4 class="title is-4">Latest Release Notes</h4>
+				<div id="releasenotes"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+        </section>
+<script>
+    let shortcut=window.shortcut;
+	if(!shortcut) {
+	document.querySelector("#content").innerHTML='<div class="container"><section class="hero is-medium"><div class="hero-body"><h3 class="title is-3">Error: Shortcut not found</h3><h4 class="subtitle is-4">This shortcut does not exist.</h4></div></section></div>'
+	}else{
+	document.querySelector("#title").textContent=shortcut.name
+	document.title+=" • "+shortcut.name
+    document.querySelector("#tagline").textContent=shortcut.tagline
+    document.querySelector("#icon").className=shortcut.icon+" shortcut-icon s64"
+	document.querySelector("#description").innerHTML=DOMPurify.sanitize(shortcut.description)
+	document.querySelector("#releasenotes").innerHTML=DOMPurify.sanitize(shortcut.releasenotes)
+	let dl = "https://easrng.github.io/routinehub-archive/download.html?"+shortcut.latest
+    document.querySelector("#download").href=dl
+    new QRCode(document.getElementById("qrcode"), dl);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"id":"4111","name":"Get Music’s detail with iTunesAPI","tagline":"iTunesAPIを利用して曲の詳細をjson形式で出力します。","icon":"ios13 c3980825855 g59721","latest":"15132","description":"\n\t\t\t\t\t<p>主にSM4D向けに作りましたが、ライブラリとしても十分に活用できます。</p>\n\t\t\t\t","releasenotes":"<p><strong>1.12 - Feb. 29, 2020, 7:49 a.m.</strong></p><p>・検索基準を\"アルバム名\"から\"タイトル アルバム アーティスト\"に変更</p>"}

@@ -1,0 +1,1 @@
+{"id":"3776","name":"Sonos HTTP Player","tagline":"Takes a Spotify URL and plays it to a Sonos Room","icon":"ios13 c946986751 g59771","latest":"11837","description":"\n\t\t\t\t\t<p>Requires https://github.com/jishi/node-sonos-http-api running on home network to function.</p>\n\t\t\t\t","releasenotes":"<p><strong>1.0 - Oct. 26, 2019, 10:03 a.m.</strong></p>"}

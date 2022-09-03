@@ -1,0 +1,1 @@
+{"id":"453","name":"SSH Client","tagline":"Ssh Client","icon":"ios12 c946986751 g59831","latest":"6819","description":"\n\t\t\t\t\t<p>This is a SSH Client that asks for a host ip, username, password and a script to run over SSH</p>\n\t\t\t\t","releasenotes":"<p><strong>1.3 - March 28, 2019, 6:49 a.m.</strong></p><p>Full support for UpdateKit</p>"}

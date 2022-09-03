@@ -1,0 +1,1 @@
+{"id":"6177","name":"Apple Health - IfHasValue","tagline":"Checks if health sample has a value","icon":"ios13 c2846468607 g59771","latest":"19549","description":"\n\t\t\t\t\t<p>Checks if the health sample has a value. If it does, it returns the value in a Nomie Tracker syntax of #type(value).</p>\n\t\t\t\t","releasenotes":"<p><strong>1.0 - Aug. 9, 2020, 12:19 p.m.</strong></p>"}
